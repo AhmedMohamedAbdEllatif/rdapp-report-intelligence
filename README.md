@@ -6,9 +6,24 @@ Initial repository bootstrap for the `rdapp-report-intelligence` project.
 
 This repository is currently set up as the starting point for future work.
 
-At this stage, the repository includes only baseline documentation and Git
-ignore rules. Application code, dependency definitions, and CI are not part of
-this ticket yet.
+At this stage, the repository includes the initial Python package structure,
+test folders, supporting docs, and Git ignore rules. Application logic,
+dependency definitions, and CI are not part of the repository yet.
+
+## Project Structure
+
+The codebase now includes the initial scaffold for application modules, tests,
+documentation, and scripts:
+
+```text
+app/
+tests/
+docs/
+scripts/
+```
+
+The detailed directory layout and architecture guidance are documented in
+[`docs/project_structure.md`](docs/project_structure.md).
 
 ## Setup
 
@@ -59,3 +74,5 @@ this ticket yet.
   does not yet include dependency management files.
 - There are currently no run commands because application code has not been
   added yet.
+- Domain-specific extractor code is expected to remain isolated by domain, with
+  shared code placed only in the shared application packages.
