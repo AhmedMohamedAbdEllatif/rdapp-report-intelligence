@@ -6,7 +6,6 @@ logger = logging.getLogger(__name__)
 
 
 class FileFormat(Enum):
-    ZIP = "zip"
     PDF = "pdf"
     UNKNOWN = "unknown"
 
@@ -15,7 +14,6 @@ class FileFormatDetector:
     """Detect file format from file header magic bytes."""
 
     SIGNATURES: dict[bytes, FileFormat] = {
-        b"PK": FileFormat.ZIP,
         b"%PDF": FileFormat.PDF,
     }
 
